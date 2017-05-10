@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ConnectivityServiceProvider } from '../providers/connectivity-service/connectivity-service';
+import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ConnectivityServiceProvider } from '../providers/connectivity-service/c
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ConnectivityServiceProvider
+    ConnectivityServiceProvider,
+    GoogleMapsProvider
   ]
 })
 export class AppModule {}
